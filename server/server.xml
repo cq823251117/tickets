@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="server"
+   SeparateXMLFiles="true"
+   PackageName="oracle.apps.ak.tickets.server" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+   </DesignTime>
+   <Containee
+      Name="loginVO"
+      FullName="oracle.apps.ak.tickets.server.loginVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="orderedTicketVO"
+      FullName="oracle.apps.ak.tickets.server.orderedTicketVO"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="ticketAM"
+      FullName="oracle.apps.ak.tickets.server.ticketAM"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="trainVO"
+      FullName="oracle.apps.ak.tickets.server.trainVO"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

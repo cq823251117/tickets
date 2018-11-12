@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="orderedTicketEO"
+   DBObjectType="table"
+   DBObjectName="ORDEREDTICKET"
+   AliasName="orderedTicketEO"
+   BindingStyle="OracleName"
+   UseGlueCode="false"
+   RowClass="oracle.apps.ak.tickets.schema.orderedTicketEOImpl"
+   DefClass="oracle.apps.fnd.framework.server.OAEntityDefImpl"
+   CollClass="oracle.apps.ak.tickets.schema.orderedTicketEOCollImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+      <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Coll|Val" />
+   </DesignTime>
+   <Attribute
+      Name="Idnum"
+      IsNotNull="true"
+      ColumnName="IDNUM"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="ORDEREDTICKET"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Personid"
+      ColumnName="PERSONID"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Trainid"
+      ColumnName="TRAINID"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Trainname"
+      Precision="20"
+      ColumnName="TRAINNAME"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Ename"
+      Precision="20"
+      ColumnName="ENAME"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Startstation"
+      Precision="20"
+      ColumnName="STARTSTATION"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Endstation"
+      Precision="20"
+      ColumnName="ENDSTATION"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Starttime"
+      ColumnName="STARTTIME"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Endtime"
+      ColumnName="ENDTIME"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Seatclass"
+      Precision="20"
+      ColumnName="SEATCLASS"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdateDate"
+      ColumnName="LAST_UPDATE_DATE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdatedBy"
+      Precision="15"
+      Scale="0"
+      ColumnName="LAST_UPDATED_BY"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreationDate"
+      ColumnName="CREATION_DATE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreatedBy"
+      Precision="15"
+      Scale="0"
+      ColumnName="CREATED_BY"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdateLogin"
+      Precision="15"
+      Scale="0"
+      ColumnName="LAST_UPDATE_LOGIN"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="ORDEREDTICKET" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="OrderedticketvoPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="oracle.apps.ak.tickets.schema.orderedTicketEO.Idnum" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_isPrimary" Value="true" />
+         <Attr Name="_DBObjectName" Value="ORDEREDTICKETVO_PRIMARY_KEY" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC00238360" >
+      <AttrArray Name="Attributes">
+         <Item Value="oracle.apps.ak.tickets.schema.orderedTicketEO.Idnum" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;IDNUM&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C00238360" />
+      </DesignTime>
+   </Key>
+</Entity>

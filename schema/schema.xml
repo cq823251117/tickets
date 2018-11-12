@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="schema"
+   SeparateXMLFiles="true"
+   PackageName="oracle.apps.ak.tickets.schema" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+   </DesignTime>
+   <Containee
+      Name="loginEO"
+      FullName="oracle.apps.ak.tickets.schema.loginEO"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="orderedTicketEO"
+      FullName="oracle.apps.ak.tickets.schema.orderedTicketEO"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="trainEO"
+      FullName="oracle.apps.ak.tickets.schema.trainEO"
+      ObjectType="Entity" >
+   </Containee>
+</JboPackage>

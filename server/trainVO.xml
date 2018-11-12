@@ -1,0 +1,552 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="trainVO"
+   BindingStyle="OracleName"
+   CustomQuery="true"
+   RowClass="oracle.apps.ak.tickets.server.trainVORowImpl"
+   ComponentClass="oracle.apps.ak.tickets.server.trainVOImpl"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+SELECT trainEO.IDNUM, 
+       trainEO.TRAINNAME, 
+       trainEO.TIMEONEPLACE, 
+       trainEO.ONEPLACE, 
+       trainEO.PRICESECONDOFONEPART, 
+       trainEO.PRICEFIRSTOFONEPART, 
+       trainEO.PRICEBUSINESSOFONEPART, 
+       trainEO.TIMETWOPLACE, 
+       trainEO.TWOPLACE, 
+       trainEO.PRICESECONDOFTWOPART, 
+       trainEO.PRICEFIRSTOFTWOPART, 
+       trainEO.PRICEBUSINESSOFTWOPART, 
+       trainEO.TIMETHREEPLACE, 
+       trainEO.THREEPLACE, 
+       trainEO.PRICESECONDOFTHREEPART, 
+       trainEO.PRICEFIRSTOFTHREEPART, 
+       trainEO.PRICEBUSINESSOFTHREEPART, 
+       trainEO.TIMEFOREPLACE, 
+       trainEO.FOREPLACE, 
+       trainEO.PRICESECONDOFFOREPART, 
+       trainEO.PRICEFIRSTOFFOREPART, 
+       trainEO.PRICEBUSINESSOFFOREPART, 
+       trainEO.TIMEFIVEPLACE, 
+       trainEO.FIVEPLACE, 
+       trainEO.PRICESECONDOFFIVEPART, 
+       trainEO.PRICEFIRSTOFFIVEPART, 
+       trainEO.PRICEBUSINESSOFFIVEPART, 
+       trainEO.TIMESIXPLACE, 
+       trainEO.SIXPLACE, 
+       trainEO.ONESECONDCLASSSEAT, 
+       trainEO.TWOSECONDCLASSSEAT, 
+       trainEO.THREESECONDCLASSSEAT, 
+       trainEO.FORESECONDCLASSSEAT, 
+       trainEO.FIVESECONDCLASSSEAT, 
+       trainEO.ONEFIRSTCLASSSEAT, 
+       trainEO.TWOFIRSTCLASSSEAT, 
+       trainEO.THREEFIRSTCLASSSEAT, 
+       trainEO.FOREFIRSTCLASSSEAT, 
+       trainEO.FIVEFIRSTCLASSSEAT, 
+       trainEO.ONEBUSINESSCLASSSEAT, 
+       trainEO.TWOBUSINESSCLASSSEAT, 
+       trainEO.THREEBUSINESSCLASSSEAT, 
+       trainEO.FOREBUSINESSCLASSSEAT, 
+       trainEO.FIVEBUSINESSCLASSSEAT, 
+       trainEO.NUMBERCOLUMN, 
+       trainEO.LAST_UPDATE_DATE, 
+       trainEO.LAST_UPDATED_BY, 
+       trainEO.CREATION_DATE, 
+       trainEO.CREATED_BY, 
+       trainEO.LAST_UPDATE_LOGIN,
+       to_char(trunc(timeOnePlace),'DD-MM-YYYY') YMD,
+       null as startPlace,
+       null as destinationPlace,
+       null as startTime,
+       null as endTime,
+       null as allTime,
+       null as price,
+       null as sortSeat,
+       null as pricethree,
+       null as countSeat,
+       null as nameCustomer,
+       null as idCustomer,
+       null as idNumChange,
+       null as idTrainChange,
+       null as startStationChange,
+       null as endStationChange,
+       null as seatClassChange
+FROM TRAININFO trainEO
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_isExpertMode" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <EntityUsage
+      Name="trainEO"
+      Entity="oracle.apps.ak.tickets.schema.trainEO" >
+      <DesignTime>
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Idnum"
+      IsNotNull="true"
+      EntityAttrName="Idnum"
+      EntityUsage="trainEO"
+      AliasName="IDNUM" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Trainname"
+      EntityAttrName="Trainname"
+      EntityUsage="trainEO"
+      AliasName="TRAINNAME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Timeoneplace"
+      EntityAttrName="Timeoneplace"
+      EntityUsage="trainEO"
+      AliasName="TIMEONEPLACE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Oneplace"
+      EntityAttrName="Oneplace"
+      EntityUsage="trainEO"
+      AliasName="ONEPLACE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricesecondofonepart"
+      EntityAttrName="Pricesecondofonepart"
+      EntityUsage="trainEO"
+      AliasName="PRICESECONDOFONEPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricefirstofonepart"
+      EntityAttrName="Pricefirstofonepart"
+      EntityUsage="trainEO"
+      AliasName="PRICEFIRSTOFONEPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricebusinessofonepart"
+      EntityAttrName="Pricebusinessofonepart"
+      EntityUsage="trainEO"
+      AliasName="PRICEBUSINESSOFONEPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Timetwoplace"
+      EntityAttrName="Timetwoplace"
+      EntityUsage="trainEO"
+      AliasName="TIMETWOPLACE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Twoplace"
+      EntityAttrName="Twoplace"
+      EntityUsage="trainEO"
+      AliasName="TWOPLACE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricesecondoftwopart"
+      EntityAttrName="Pricesecondoftwopart"
+      EntityUsage="trainEO"
+      AliasName="PRICESECONDOFTWOPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricefirstoftwopart"
+      EntityAttrName="Pricefirstoftwopart"
+      EntityUsage="trainEO"
+      AliasName="PRICEFIRSTOFTWOPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricebusinessoftwopart"
+      EntityAttrName="Pricebusinessoftwopart"
+      EntityUsage="trainEO"
+      AliasName="PRICEBUSINESSOFTWOPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Timethreeplace"
+      EntityAttrName="Timethreeplace"
+      EntityUsage="trainEO"
+      AliasName="TIMETHREEPLACE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Threeplace"
+      EntityAttrName="Threeplace"
+      EntityUsage="trainEO"
+      AliasName="THREEPLACE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricesecondofthreepart"
+      EntityAttrName="Pricesecondofthreepart"
+      EntityUsage="trainEO"
+      AliasName="PRICESECONDOFTHREEPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricefirstofthreepart"
+      EntityAttrName="Pricefirstofthreepart"
+      EntityUsage="trainEO"
+      AliasName="PRICEFIRSTOFTHREEPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricebusinessofthreepart"
+      EntityAttrName="Pricebusinessofthreepart"
+      EntityUsage="trainEO"
+      AliasName="PRICEBUSINESSOFTHREEPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Timeforeplace"
+      EntityAttrName="Timeforeplace"
+      EntityUsage="trainEO"
+      AliasName="TIMEFOREPLACE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Foreplace"
+      EntityAttrName="Foreplace"
+      EntityUsage="trainEO"
+      AliasName="FOREPLACE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricesecondofforepart"
+      EntityAttrName="Pricesecondofforepart"
+      EntityUsage="trainEO"
+      AliasName="PRICESECONDOFFOREPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricefirstofforepart"
+      EntityAttrName="Pricefirstofforepart"
+      EntityUsage="trainEO"
+      AliasName="PRICEFIRSTOFFOREPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricebusinessofforepart"
+      EntityAttrName="Pricebusinessofforepart"
+      EntityUsage="trainEO"
+      AliasName="PRICEBUSINESSOFFOREPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Timefiveplace"
+      EntityAttrName="Timefiveplace"
+      EntityUsage="trainEO"
+      AliasName="TIMEFIVEPLACE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Fiveplace"
+      EntityAttrName="Fiveplace"
+      EntityUsage="trainEO"
+      AliasName="FIVEPLACE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricesecondoffivepart"
+      EntityAttrName="Pricesecondoffivepart"
+      EntityUsage="trainEO"
+      AliasName="PRICESECONDOFFIVEPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricefirstoffivepart"
+      EntityAttrName="Pricefirstoffivepart"
+      EntityUsage="trainEO"
+      AliasName="PRICEFIRSTOFFIVEPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricebusinessoffivepart"
+      EntityAttrName="Pricebusinessoffivepart"
+      EntityUsage="trainEO"
+      AliasName="PRICEBUSINESSOFFIVEPART" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Timesixplace"
+      EntityAttrName="Timesixplace"
+      EntityUsage="trainEO"
+      AliasName="TIMESIXPLACE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Sixplace"
+      EntityAttrName="Sixplace"
+      EntityUsage="trainEO"
+      AliasName="SIXPLACE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Onesecondclassseat"
+      EntityAttrName="Onesecondclassseat"
+      EntityUsage="trainEO"
+      AliasName="ONESECONDCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Twosecondclassseat"
+      EntityAttrName="Twosecondclassseat"
+      EntityUsage="trainEO"
+      AliasName="TWOSECONDCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Threesecondclassseat"
+      EntityAttrName="Threesecondclassseat"
+      EntityUsage="trainEO"
+      AliasName="THREESECONDCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Foresecondclassseat"
+      EntityAttrName="Foresecondclassseat"
+      EntityUsage="trainEO"
+      AliasName="FORESECONDCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Fivesecondclassseat"
+      EntityAttrName="Fivesecondclassseat"
+      EntityUsage="trainEO"
+      AliasName="FIVESECONDCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Onefirstclassseat"
+      EntityAttrName="Onefirstclassseat"
+      EntityUsage="trainEO"
+      AliasName="ONEFIRSTCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Twofirstclassseat"
+      EntityAttrName="Twofirstclassseat"
+      EntityUsage="trainEO"
+      AliasName="TWOFIRSTCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Threefirstclassseat"
+      EntityAttrName="Threefirstclassseat"
+      EntityUsage="trainEO"
+      AliasName="THREEFIRSTCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Forefirstclassseat"
+      EntityAttrName="Forefirstclassseat"
+      EntityUsage="trainEO"
+      AliasName="FOREFIRSTCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Fivefirstclassseat"
+      EntityAttrName="Fivefirstclassseat"
+      EntityUsage="trainEO"
+      AliasName="FIVEFIRSTCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Onebusinessclassseat"
+      EntityAttrName="Onebusinessclassseat"
+      EntityUsage="trainEO"
+      AliasName="ONEBUSINESSCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Twobusinessclassseat"
+      EntityAttrName="Twobusinessclassseat"
+      EntityUsage="trainEO"
+      AliasName="TWOBUSINESSCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Threebusinessclassseat"
+      EntityAttrName="Threebusinessclassseat"
+      EntityUsage="trainEO"
+      AliasName="THREEBUSINESSCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Forebusinessclassseat"
+      EntityAttrName="Forebusinessclassseat"
+      EntityUsage="trainEO"
+      AliasName="FOREBUSINESSCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Fivebusinessclassseat"
+      EntityAttrName="Fivebusinessclassseat"
+      EntityUsage="trainEO"
+      AliasName="FIVEBUSINESSCLASSSEAT" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Numbercolumn"
+      EntityAttrName="Numbercolumn"
+      EntityUsage="trainEO"
+      AliasName="NUMBERCOLUMN" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateDate"
+      EntityAttrName="LastUpdateDate"
+      EntityUsage="trainEO"
+      AliasName="LAST_UPDATE_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdatedBy"
+      EntityAttrName="LastUpdatedBy"
+      EntityUsage="trainEO"
+      AliasName="LAST_UPDATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreationDate"
+      EntityAttrName="CreationDate"
+      EntityUsage="trainEO"
+      AliasName="CREATION_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreatedBy"
+      EntityAttrName="CreatedBy"
+      EntityUsage="trainEO"
+      AliasName="CREATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateLogin"
+      EntityAttrName="LastUpdateLogin"
+      EntityUsage="trainEO"
+      AliasName="LAST_UPDATE_LOGIN" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ymd"
+      IsPersistent="false"
+      Precision="10"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="YMD"
+      Expression="YMD"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="10" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Startplace"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="STARTPLACE"
+      Expression="STARTPLACE"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Destinationplace"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="DESTINATIONPLACE"
+      Expression="DESTINATIONPLACE"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Starttime"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="STARTTIME"
+      Expression="STARTTIME"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Endtime"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="ENDTIME"
+      Expression="ENDTIME"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Alltime"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="ALLTIME"
+      Expression="ALLTIME"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Price"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="PRICE"
+      Expression="PRICE"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Sortseat"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="SORTSEAT"
+      Expression="SORTSEAT"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Pricethree"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="PRICETHREE"
+      Expression="PRICETHREE"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Countseat"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="COUNTSEAT"
+      Expression="COUNTSEAT"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Namecustomer"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="NAMECUSTOMER"
+      Expression="NAMECUSTOMER"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Idcustomer"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="IDCUSTOMER"
+      Expression="IDCUSTOMER"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Idnumchange"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="IDNUMCHANGE"
+      Expression="IDNUMCHANGE"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Idtrainchange"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="IDTRAINCHANGE"
+      Expression="IDTRAINCHANGE"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Startstationchange"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="STARTSTATIONCHANGE"
+      Expression="STARTSTATIONCHANGE"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Endstationchange"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="ENDSTATIONCHANGE"
+      Expression="ENDSTATIONCHANGE"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Seatclasschange"
+      IsPersistent="false"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="SEATCLASSCHANGE"
+      Expression="SEATCLASSCHANGE"
+      SQLType="VARCHAR" >
+   </ViewAttribute>
+</ViewObject>

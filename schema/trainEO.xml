@@ -1,0 +1,597 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="trainEO"
+   DBObjectType="table"
+   DBObjectName="TRAININFO"
+   AliasName="trainEO"
+   BindingStyle="OracleName"
+   UseGlueCode="false"
+   RowClass="oracle.apps.ak.tickets.schema.trainEOImpl"
+   DefClass="oracle.apps.fnd.framework.server.OAEntityDefImpl"
+   CollClass="oracle.apps.ak.tickets.schema.trainEOCollImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+      <Attr Name="_panelSchema" Value="table|view" />
+      <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Coll|Val" />
+   </DesignTime>
+   <Attribute
+      Name="Idnum"
+      IsNotNull="true"
+      ColumnName="IDNUM"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Trainname"
+      Precision="20"
+      ColumnName="TRAINNAME"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Timeoneplace"
+      ColumnName="TIMEONEPLACE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Oneplace"
+      Precision="20"
+      ColumnName="ONEPLACE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricesecondofonepart"
+      ColumnName="PRICESECONDOFONEPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricefirstofonepart"
+      ColumnName="PRICEFIRSTOFONEPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricebusinessofonepart"
+      ColumnName="PRICEBUSINESSOFONEPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Timetwoplace"
+      ColumnName="TIMETWOPLACE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Twoplace"
+      Precision="20"
+      ColumnName="TWOPLACE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricesecondoftwopart"
+      ColumnName="PRICESECONDOFTWOPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricefirstoftwopart"
+      ColumnName="PRICEFIRSTOFTWOPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricebusinessoftwopart"
+      ColumnName="PRICEBUSINESSOFTWOPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Timethreeplace"
+      ColumnName="TIMETHREEPLACE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Threeplace"
+      Precision="20"
+      ColumnName="THREEPLACE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricesecondofthreepart"
+      ColumnName="PRICESECONDOFTHREEPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricefirstofthreepart"
+      ColumnName="PRICEFIRSTOFTHREEPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricebusinessofthreepart"
+      ColumnName="PRICEBUSINESSOFTHREEPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Timeforeplace"
+      ColumnName="TIMEFOREPLACE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Foreplace"
+      Precision="20"
+      ColumnName="FOREPLACE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricesecondofforepart"
+      ColumnName="PRICESECONDOFFOREPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricefirstofforepart"
+      ColumnName="PRICEFIRSTOFFOREPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricebusinessofforepart"
+      ColumnName="PRICEBUSINESSOFFOREPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Timefiveplace"
+      ColumnName="TIMEFIVEPLACE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Fiveplace"
+      Precision="20"
+      ColumnName="FIVEPLACE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricesecondoffivepart"
+      ColumnName="PRICESECONDOFFIVEPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricefirstoffivepart"
+      ColumnName="PRICEFIRSTOFFIVEPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Pricebusinessoffivepart"
+      ColumnName="PRICEBUSINESSOFFIVEPART"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Timesixplace"
+      ColumnName="TIMESIXPLACE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Sixplace"
+      Precision="20"
+      ColumnName="SIXPLACE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Onesecondclassseat"
+      ColumnName="ONESECONDCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Twosecondclassseat"
+      ColumnName="TWOSECONDCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Threesecondclassseat"
+      ColumnName="THREESECONDCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Foresecondclassseat"
+      ColumnName="FORESECONDCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Fivesecondclassseat"
+      ColumnName="FIVESECONDCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Onefirstclassseat"
+      ColumnName="ONEFIRSTCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Twofirstclassseat"
+      ColumnName="TWOFIRSTCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Threefirstclassseat"
+      ColumnName="THREEFIRSTCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Forefirstclassseat"
+      ColumnName="FOREFIRSTCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Fivefirstclassseat"
+      ColumnName="FIVEFIRSTCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Onebusinessclassseat"
+      ColumnName="ONEBUSINESSCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Twobusinessclassseat"
+      ColumnName="TWOBUSINESSCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Threebusinessclassseat"
+      ColumnName="THREEBUSINESSCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Forebusinessclassseat"
+      ColumnName="FOREBUSINESSCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Fivebusinessclassseat"
+      ColumnName="FIVEBUSINESSCLASSSEAT"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Numbercolumn"
+      ColumnName="NUMBERCOLUMN"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdateDate"
+      ColumnName="LAST_UPDATE_DATE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdatedBy"
+      Precision="15"
+      Scale="0"
+      ColumnName="LAST_UPDATED_BY"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreationDate"
+      ColumnName="CREATION_DATE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreatedBy"
+      Precision="15"
+      Scale="0"
+      ColumnName="CREATED_BY"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdateLogin"
+      Precision="15"
+      Scale="0"
+      ColumnName="LAST_UPDATE_LOGIN"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TRAININFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="SysC00238358" >
+      <AttrArray Name="Attributes">
+         <Item Value="oracle.apps.ak.tickets.schema.trainEO.Idnum" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_isPrimary" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C00238358" />
+      </DesignTime>
+   </Key>
+</Entity>

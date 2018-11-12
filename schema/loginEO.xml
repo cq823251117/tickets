@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="loginEO"
+   DBObjectType="table"
+   DBObjectName="PERSONINFO"
+   AliasName="loginEO"
+   BindingStyle="OracleName"
+   UseGlueCode="false"
+   RowClass="oracle.apps.ak.tickets.schema.loginEOImpl"
+   DefClass="oracle.apps.fnd.framework.server.OAEntityDefImpl"
+   CollClass="oracle.apps.ak.tickets.schema.loginEOCollImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+      <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Coll|Val" />
+   </DesignTime>
+   <Attribute
+      Name="Idnum"
+      IsNotNull="true"
+      ColumnName="IDNUM"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="PERSONINFO"
+      PrimaryKey="true" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Loginnum"
+      Precision="20"
+      ColumnName="LOGINNUM"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="PERSONINFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Loginpassword"
+      Precision="20"
+      ColumnName="LOGINPASSWORD"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="PERSONINFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Ename"
+      Precision="20"
+      ColumnName="ENAME"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="PERSONINFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Idcard"
+      Precision="18"
+      ColumnName="IDCARD"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="PERSONINFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="18" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Phone"
+      ColumnName="PHONE"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="PERSONINFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdateDate"
+      ColumnName="LAST_UPDATE_DATE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="PERSONINFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdatedBy"
+      Precision="15"
+      Scale="0"
+      ColumnName="LAST_UPDATED_BY"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="PERSONINFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreationDate"
+      ColumnName="CREATION_DATE"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="DATE"
+      SQLType="TIMESTAMP"
+      TableName="PERSONINFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="7" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="CreatedBy"
+      Precision="15"
+      Scale="0"
+      ColumnName="CREATED_BY"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="PERSONINFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="LastUpdateLogin"
+      Precision="15"
+      Scale="0"
+      ColumnName="LAST_UPDATE_LOGIN"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="PERSONINFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Sex"
+      Precision="20"
+      ColumnName="SEX"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="PERSONINFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Attribute
+      Name="Ident"
+      Precision="20"
+      ColumnName="IDENT"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="PERSONINFO" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="20" />
+      </DesignTime>
+   </Attribute>
+   <Key
+      Name="SysC00238356" >
+      <AttrArray Name="Attributes">
+         <Item Value="oracle.apps.ak.tickets.schema.loginEO.Idnum" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_isPrimary" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C00238356" />
+      </DesignTime>
+   </Key>
+</Entity>

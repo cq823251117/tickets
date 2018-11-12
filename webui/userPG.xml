@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+   <content>
+      <oa:pageLayout id="pageLayout" amDefName="oracle.apps.ak.tickets.server.ticketAM" controllerClass="oracle.apps.ak.tickets.webui.userCO">
+         <ui:corporateBranding>
+            <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
+         </ui:corporateBranding>
+         <ui:contents>
+            <oa:messageComponentLayout id="messageComponentLayout">
+               <ui:contents>
+                  <oa:messageLayout id="messageLayout1" prompt="">
+                     <ui:contents>
+                        <oa:header id="header1" text="当前位置--->查询购票页面">
+                           <ui:contents>
+                              <oa:pageButtonBar id="pageButtonBar">
+                                 <ui:contents>
+                                    <oa:submitButton id="queryOrder" text="查询购票" prompt="查询购票"/>
+                                    <oa:submitButton id="infoOfOrder" prompt="订单详情"/>
+                                    <oa:submitButton id="infoOfUser" text="个人信息" prompt="个人信息"/>
+                                 </ui:contents>
+                              </oa:pageButtonBar>
+                           </ui:contents>
+                        </oa:header>
+                        <oa:tableLayout id="tabbleLayout" hAlign="center">
+                           <ui:contents>
+                              <oa:rowLayout id="rouLayout1">
+                                 <ui:contents>
+                                    <oa:cellFormat id="cellFormat11">
+                                       <ui:contents>
+                                          <oa:messageTextInput id="placeOfDeparture"/>
+                                       </ui:contents>
+                                    </oa:cellFormat>
+                                    <oa:cellFormat id="cellFormat12">
+                                       <ui:contents>
+                                          <oa:messageStyledText id="item1" prompt=">>>>>>>>"/>
+                                       </ui:contents>
+                                    </oa:cellFormat>
+                                    <oa:cellFormat id="cellFormat13">
+                                       <ui:contents>
+                                          <oa:messageTextInput id="placeOfDestination"/>
+                                       </ui:contents>
+                                    </oa:cellFormat>
+                                 </ui:contents>
+                              </oa:rowLayout>
+                              <oa:rowLayout id="rowLayout2">
+                                 <ui:contents>
+                                    <oa:cellFormat id="cellFormat21">
+                                       <ui:contents>
+                                          <oa:messageTextInput id="timePlan" dataType="DATE"/>
+                                       </ui:contents>
+                                    </oa:cellFormat>
+                                 </ui:contents>
+                              </oa:rowLayout>
+                              <oa:rowLayout id="rowLayout3">
+                                 <ui:contents>
+                                    <oa:cellFormat id="cellFormat31">
+                                       <ui:contents>
+                                          <oa:submitButton id="query" text="询查" prompt="询查"/>
+                                       </ui:contents>
+                                    </oa:cellFormat>
+                                 </ui:contents>
+                              </oa:rowLayout>
+                           </ui:contents>
+                        </oa:tableLayout>
+                     </ui:contents>
+                  </oa:messageLayout>
+                  <oa:messageLayout id="messageLayout2">
+                     <ui:contents>
+                        <oa:header id="header2" text=""/>
+                        <oa:table id="table" text="结果如下" width="100%">
+                           <ui:contents>
+                              <oa:messageStyledText id="nameOfTrain" destination="OA.jsp?page=/oracle/apps/ak/tickets/webui/trainDetailPG&amp;idNum={@Idnum}&amp;trainName={@Trainname}&amp;startStation={@Startplace}&amp;endStation={@Destinationplace}&amp;startTime={@Starttime}&amp;endTime={@Endtime}&amp;allTime={@Alltime}&amp;nameCustomer={@Namecustomer}&amp;idCustomer={@Idcustomer}&amp;idNumChange={@Idnumchange}&amp;idTrainChange={@Idtrainchange}&amp;startStationChange={@Startstationchange}&amp;endStationChange={@Endstationchange}&amp;seatClassChange={@Seatclasschange}" prompt="车次" viewName="trainVO1" viewAttr="Trainname"/>
+                              <oa:messageStyledText id="startPlace" destination="" prompt="出发站" viewName="trainVO1" viewAttr="Startplace"/>
+                              <oa:messageStyledText id="destinationPlace" destination="" prompt="到达站" viewName="trainVO1" viewAttr="Destinationplace"/>
+                              <oa:messageStyledText id="startTime" destination="" prompt="出发时间" viewName="trainVO1" viewAttr="Starttime"/>
+                              <oa:messageStyledText id="endTime" destination="" prompt="到达时间" viewName="trainVO1" viewAttr="Endtime" dataType="VARCHAR2"/>
+                              <oa:messageStyledText id="allTime" destination="" prompt="总时长" viewName="trainVO1" viewAttr="Alltime" dataType="VARCHAR2"/>
+                              <oa:messageStyledText id="price" destination="" prompt="价格" viewName="trainVO1" viewAttr="Price"/>
+                           </ui:contents>
+                        </oa:table>
+                        <oa:formValue id="nameCustomer" prompt=""/>
+                        <oa:formValue id="idCustomer" prompt=""/>
+                        <oa:formValue id="idNumChange" prompt=""/>
+                        <oa:formValue id="idTrainChange" prompt=""/>
+                        <oa:formValue id="startStationChange" prompt=""/>
+                        <oa:formValue id="endStationChange" prompt=""/>
+                        <oa:formValue id="seatClassChange" prompt=""/>
+                     </ui:contents>
+                  </oa:messageLayout>
+               </ui:contents>
+            </oa:messageComponentLayout>
+         </ui:contents>
+      </oa:pageLayout>
+   </content>
+</page>

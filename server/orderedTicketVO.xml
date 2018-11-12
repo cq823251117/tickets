@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="orderedTicketVO"
+   SelectList="orderedTicketEO.IDNUM, 
+       orderedTicketEO.PERSONID, 
+       orderedTicketEO.TRAINID, 
+       orderedTicketEO.TRAINNAME, 
+       orderedTicketEO.ENAME, 
+       orderedTicketEO.STARTSTATION, 
+       orderedTicketEO.ENDSTATION, 
+       orderedTicketEO.STARTTIME, 
+       orderedTicketEO.ENDTIME, 
+       orderedTicketEO.SEATCLASS, 
+       orderedTicketEO.LAST_UPDATE_DATE, 
+       orderedTicketEO.LAST_UPDATED_BY, 
+       orderedTicketEO.CREATION_DATE, 
+       orderedTicketEO.CREATED_BY, 
+       orderedTicketEO.LAST_UPDATE_LOGIN"
+   FromList="ORDEREDTICKET orderedTicketEO"
+   BindingStyle="OracleName"
+   CustomQuery="false"
+   RowClass="oracle.apps.ak.tickets.server.orderedTicketVORowImpl"
+   ComponentClass="oracle.apps.ak.tickets.server.orderedTicketVOImpl"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <EntityUsage
+      Name="orderedTicketEO"
+      Entity="oracle.apps.ak.tickets.schema.orderedTicketEO" >
+      <DesignTime>
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Idnum"
+      IsNotNull="true"
+      EntityAttrName="Idnum"
+      EntityUsage="orderedTicketEO"
+      AliasName="IDNUM" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Personid"
+      EntityAttrName="Personid"
+      EntityUsage="orderedTicketEO"
+      AliasName="PERSONID" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Trainid"
+      EntityAttrName="Trainid"
+      EntityUsage="orderedTicketEO"
+      AliasName="TRAINID" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Trainname"
+      EntityAttrName="Trainname"
+      EntityUsage="orderedTicketEO"
+      AliasName="TRAINNAME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ename"
+      EntityAttrName="Ename"
+      EntityUsage="orderedTicketEO"
+      AliasName="ENAME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Startstation"
+      EntityAttrName="Startstation"
+      EntityUsage="orderedTicketEO"
+      AliasName="STARTSTATION" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Endstation"
+      EntityAttrName="Endstation"
+      EntityUsage="orderedTicketEO"
+      AliasName="ENDSTATION" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Starttime"
+      EntityAttrName="Starttime"
+      EntityUsage="orderedTicketEO"
+      AliasName="STARTTIME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Endtime"
+      EntityAttrName="Endtime"
+      EntityUsage="orderedTicketEO"
+      AliasName="ENDTIME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Seatclass"
+      EntityAttrName="Seatclass"
+      EntityUsage="orderedTicketEO"
+      AliasName="SEATCLASS" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateDate"
+      EntityAttrName="LastUpdateDate"
+      EntityUsage="orderedTicketEO"
+      AliasName="LAST_UPDATE_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdatedBy"
+      EntityAttrName="LastUpdatedBy"
+      EntityUsage="orderedTicketEO"
+      AliasName="LAST_UPDATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreationDate"
+      EntityAttrName="CreationDate"
+      EntityUsage="orderedTicketEO"
+      AliasName="CREATION_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreatedBy"
+      EntityAttrName="CreatedBy"
+      EntityUsage="orderedTicketEO"
+      AliasName="CREATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateLogin"
+      EntityAttrName="LastUpdateLogin"
+      EntityUsage="orderedTicketEO"
+      AliasName="LAST_UPDATE_LOGIN" >
+   </ViewAttribute>
+</ViewObject>

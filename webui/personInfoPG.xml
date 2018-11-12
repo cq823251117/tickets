@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+   <content>
+      <oa:pageLayout id="pageLayout" controllerClass="oracle.apps.ak.tickets.webui.personInfoCO" amDefName="oracle.apps.ak.tickets.server.ticketAM">
+         <ui:corporateBranding>
+            <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
+         </ui:corporateBranding>
+         <ui:contents>
+            <oa:messageComponentLayout id="messageComponentLayout">
+               <ui:contents>
+                  <oa:messageLayout id="messageLayout1" prompt="">
+                     <ui:contents>
+                        <oa:header id="header1" text="当前位置--->个人信息页面">
+                           <ui:contents>
+                              <oa:pageButtonBar id="pageButtonBar">
+                                 <ui:contents>
+                                    <oa:submitButton id="queryOrder" text="查询购票" prompt="查询购票"/>
+                                    <oa:submitButton id="infoOfOrder" prompt="订单详情"/>
+                                    <oa:submitButton id="infoOfUser" text="个人信息" prompt="个人信息"/>
+                                 </ui:contents>
+                              </oa:pageButtonBar>
+                           </ui:contents>
+                        </oa:header>
+                     </ui:contents>
+                  </oa:messageLayout>
+                  <oa:messageLayout id="messageLayout2">
+                     <ui:contents>
+                        <oa:tableLayout id="defaultSingleColumn1" hAlign="center">
+                           <ui:contents>
+                              <oa:messageTextInput id="personName1" disabled="true" prompt="姓名" viewName="loginVO1" viewAttr="Ename"/>
+                              <oa:messageStyledText id="messageStyledText11" prompt=""/>
+                              <oa:messageTextInput id="loginName1" disabled="true" prompt="登录名" viewName="loginVO1" viewAttr="Loginnum"/>
+                              <oa:messageStyledText id="messageStyledText21" prompt=""/>
+                              <oa:messageTextInput id="cardNumber1" disabled="true" prompt="证件号" viewName="loginVO1" viewAttr="Idcard"/>
+                              <oa:messageStyledText id="messageStyledText31" prompt=""/>
+                              <oa:messageTextInput id="phoneNumber1" disabled="true" prompt="电话" viewName="loginVO1" viewAttr="Phone"/>
+                              <oa:messageStyledText id="messageStyledText41" prompt=""/>
+                              <oa:messageTextInput id="sex1" disabled="true" prompt="性别" viewName="loginVO1" viewAttr="Sex"/>
+                              <oa:messageStyledText id="messageStyledText51" prompt=""/>
+                              <oa:messageTextInput id="identity1" disabled="true" prompt="身份" viewName="loginVO1" viewAttr="Ident"/>
+                              <oa:messageStyledText id="messageStyledText61" prompt=""/>
+                           </ui:contents>
+                        </oa:tableLayout>
+                        <oa:formValue id="idCustomer"/>
+                        <oa:formValue id="nameCustomer"/>
+                     </ui:contents>
+                  </oa:messageLayout>
+               </ui:contents>
+            </oa:messageComponentLayout>
+         </ui:contents>
+      </oa:pageLayout>
+   </content>
+</page>

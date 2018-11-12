@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+   <content>
+      <oa:pageLayout id="region1" amDefName="oracle.apps.ak.tickets.server.ticketAM" controllerClass="oracle.apps.ak.tickets.webui.trainDetailCO">
+         <ui:corporateBranding>
+            <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
+         </ui:corporateBranding>
+         <ui:contents>
+            <oa:messageComponentLayout id="messageComponentLayout">
+               <ui:contents>
+                  <oa:messageLayout id="messageLayout1">
+                     <ui:contents>
+                        <oa:header id="header1" text="当前位置--->查询购票页面">
+                           <ui:contents>
+                              <oa:pageButtonBar id="pageButtonBar">
+                                 <ui:contents>
+                                    <oa:submitButton id="queryOrder" text="查询购票" prompt="查询购票"/>
+                                    <oa:submitButton id="infoOfOrder" prompt="订单详情"/>
+                                    <oa:submitButton id="infoOfUser" text="个人信息" prompt="个人信息"/>
+                                 </ui:contents>
+                              </oa:pageButtonBar>
+                           </ui:contents>
+                        </oa:header>
+                        <oa:rowLayout id="region2" hAlign="left">
+                           <ui:contents>
+                              <oa:formValue id="nameCustomer"/>
+                              <oa:formValue id="idOfTrain"/>
+                              <oa:messageTextInput id="nameTrain" disabled="true" prompt=""/>
+                              <oa:messageTextInput id="startStation" disabled="true" prompt=""/>
+                              <oa:messageTextInput id="endStation" disabled="true" prompt=""/>
+                              <oa:messageTextInput id="startTime" disabled="true" prompt=""/>
+                              <oa:messageTextInput id="endTime" disabled="true" prompt=""/>
+                              <oa:messageTextInput id="allTime" disabled="true" prompt=""/>
+                              <oa:formValue id="nameOfTrain"/>
+                              <oa:formValue id="idCustomer"/>
+                              <oa:formValue id="idNumChange" prompt=""/>
+                              <oa:formValue id="idTrainChange" prompt=""/>
+                              <oa:formValue id="startStationChange" prompt=""/>
+                              <oa:formValue id="endStationChange" prompt=""/>
+                              <oa:formValue id="seatClassChange" prompt=""/>
+                           </ui:contents>
+                        </oa:rowLayout>
+                     </ui:contents>
+                  </oa:messageLayout>
+                  <oa:messageLayout id="messageLayout2">
+                     <ui:contents>
+                        <oa:header id="header2"/>
+                        <oa:table id="table" text="座位信息" width="80%">
+                           <ui:contents>
+                              <oa:messageStyledText id="serial" viewName="trainVO1" viewAttr="Numbercolumn" prompt="序号"/>
+                              <oa:messageStyledText id="sortSeat" prompt="座位类型" viewName="trainVO1" viewAttr="Sortseat"/>
+                              <oa:messageStyledText id="price" prompt="价格" viewName="trainVO1" viewAttr="Pricethree"/>
+                              <oa:messageStyledText id="numberSeat" prompt="车票余量" viewName="trainVO1" viewAttr="Countseat"/>
+                              <oa:image id="purchase" prompt="购票" source="toolbar_updatelayout_enabled.gif">
+                                 <ui:primaryClientAction>
+                                    <ui:fireAction event="purchase">
+                                       <ui:parameters>
+                                          <ui:parameter key="serial" value="${oa.trainVO1.Numbercolumn}"/>
+                                       </ui:parameters>
+                                    </ui:fireAction>
+                                 </ui:primaryClientAction>
+                              </oa:image>
+                           </ui:contents>
+                        </oa:table>
+                     </ui:contents>
+                  </oa:messageLayout>
+               </ui:contents>
+            </oa:messageComponentLayout>
+         </ui:contents>
+      </oa:pageLayout>
+   </content>
+</page>

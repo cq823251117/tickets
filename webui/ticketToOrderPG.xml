@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+   <content>
+      <oa:pageLayout id="pageLayout" amDefName="oracle.apps.ak.tickets.server.ticketAM" controllerClass="oracle.apps.ak.tickets.webui.ticketToOrderCO">
+         <ui:corporateBranding>
+            <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
+         </ui:corporateBranding>
+         <ui:contents>
+            <oa:header id="header1" text="当前位置--->查询购票页面">
+               <ui:contents>
+                  <oa:pageButtonBar id="pageButtonBar">
+                     <ui:contents>
+                        <oa:submitButton id="queryOrder" text="查询购票" prompt="查询购票"/>
+                        <oa:submitButton id="infoOfOrder" prompt="订单详情"/>
+                        <oa:submitButton id="infoOfUser" text="个人信息" prompt="个人信息"/>
+                     </ui:contents>
+                  </oa:pageButtonBar>
+               </ui:contents>
+            </oa:header>
+            <oa:tableLayout id="defaultSingleColumn" hAlign="center">
+               <ui:contents>
+                  <oa:messageTextInput id="nameOfTrain" disabled="true" prompt="车次"/>
+                  <oa:messageStyledText id="messageStyledText1" prompt=""/>
+                  <oa:messageTextInput id="nameCustomer" disabled="true" prompt="购票人"/>
+                  <oa:messageStyledText id="messageStyledText2" prompt=""/>
+                  <oa:messageTextInput id="startStation" disabled="true" prompt="出发站"/>
+                  <oa:messageStyledText id="messageStyledText3" prompt=""/>
+                  <oa:messageTextInput id="endStation" disabled="true" prompt="到达站"/>
+                  <oa:messageStyledText id="messageStyledText4" prompt=""/>
+                  <oa:messageTextInput id="startTime" disabled="true" prompt="出发时间"/>
+                  <oa:messageStyledText id="messageStyledText5" prompt=""/>
+                  <oa:messageTextInput id="endTime" disabled="true" prompt="到达时间"/>
+                  <oa:messageStyledText id="messageStyledText6" prompt=""/>
+                  <oa:messageTextInput id="serial" disabled="true" prompt="座位类型"/>
+               </ui:contents>
+            </oa:tableLayout>
+            <oa:formValue id="idCustomer"/>
+         </ui:contents>
+      </oa:pageLayout>
+   </content>
+</page>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="ticketAM"
+   ComponentClass="oracle.apps.ak.tickets.server.ticketAMImpl" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="trainVO1"
+      ViewObjectName="oracle.apps.ak.tickets.server.trainVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="loginVO1"
+      ViewObjectName="oracle.apps.ak.tickets.server.loginVO" >
+   </ViewUsage>
+   <ViewUsage
+      Name="orderedTicketVO1"
+      ViewObjectName="oracle.apps.ak.tickets.server.orderedTicketVO" >
+   </ViewUsage>
+</AppModule>

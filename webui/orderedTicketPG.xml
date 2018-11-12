@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+   <content>
+      <oa:pageLayout id="pageLayout" amDefName="oracle.apps.ak.tickets.server.ticketAM" controllerClass="oracle.apps.ak.tickets.webui.orderedTicketCO">
+         <ui:corporateBranding>
+            <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
+         </ui:corporateBranding>
+         <ui:contents>
+            <oa:messageComponentLayout id="messageComponentLayout">
+               <ui:contents>
+                  <oa:messageLayout id="messageLayout1">
+                     <ui:contents>
+                        <oa:header id="header" text="当前位置--->订单查询页面">
+                           <ui:contents>
+                              <oa:pageButtonBar id="pageButtonBar">
+                                 <ui:contents>
+                                    <oa:submitButton id="queryOrder" text="查询购票" prompt="查询购票"/>
+                                    <oa:submitButton id="infoOfOrder" prompt="订单详情"/>
+                                    <oa:submitButton id="infoOfUser" text="个人信息" prompt="个人信息"/>
+                                 </ui:contents>
+                              </oa:pageButtonBar>
+                           </ui:contents>
+                        </oa:header>
+                        <oa:messageStyledText id="item1"/>
+                     </ui:contents>
+                  </oa:messageLayout>
+                  <oa:messageLayout id="messageLayout2">
+                     <ui:contents>
+                        <oa:table id="table" width="100%">
+                           <ui:contents>
+                              <oa:messageStyledText id="nameOfTrain" viewName="orderedTicketVO1" viewAttr="Trainname" prompt="车次"/>
+                              <oa:messageStyledText id="startStation" prompt="出发站" viewName="orderedTicketVO1" viewAttr="Startstation"/>
+                              <oa:messageStyledText id="endStation" prompt="到达站" viewName="orderedTicketVO1" viewAttr="Endstation"/>
+                              <oa:messageStyledText id="startTime" prompt="出发时间" viewName="orderedTicketVO1" viewAttr="Starttime" dataType="DATETIME"/>
+                              <oa:messageStyledText id="endTime" prompt="到达时间" viewName="orderedTicketVO1" viewAttr="Endtime" dataType="DATETIME"/>
+                              <oa:messageStyledText id="seatClass" prompt="座位类型" viewName="orderedTicketVO1" viewAttr="Seatclass"/>
+                              <oa:image id="backTicket" source="toolbar_updatelayout_enabled.gif" prompt="退票">
+                                 <ui:primaryClientAction>
+                                    <ui:fireAction event="backTic">
+                                       <ui:parameters>
+                                          <ui:parameter key="idNumBack" value="${oa.orderedTicketVO1.Idnum}"/>
+                                          <ui:parameter key="idTrain" value="${oa.orderedTicketVO1.Trainid}"/>
+                                          <ui:parameter key="startStation" value="${oa.orderedTicketVO1.Startstation}"/>
+                                          <ui:parameter key="endStation" value="${oa.orderedTicketVO1.Endstation}"/>
+                                          <ui:parameter key="seatClass" value="${oa.orderedTicketVO1.Seatclass}"/>
+                                       </ui:parameters>
+                                    </ui:fireAction>
+                                 </ui:primaryClientAction>
+                              </oa:image>
+                              <oa:image id="changeTicket" source="toolbar_updatelayout_enabled.gif" prompt="改签">
+                                 <ui:primaryClientAction>
+                                    <ui:fireAction event="changeTicket">
+                                       <ui:parameters>
+                                          <ui:parameter key="idNumBack" value="${oa.orderedTicketVO1.Idnum}"/>
+                                          <ui:parameter key="idTrain" value="${oa.orderedTicketVO1.Trainid}"/>
+                                          <ui:parameter key="startStation" value="${oa.orderedTicketVO1.Startstation}"/>
+                                          <ui:parameter key="endStation" value="${oa.orderedTicketVO1.Endstation}"/>
+                                          <ui:parameter key="seatClass" value="${oa.orderedTicketVO1.Seatclass}"/>
+                                       </ui:parameters>
+                                    </ui:fireAction>
+                                 </ui:primaryClientAction>
+                              </oa:image>
+                           </ui:contents>
+                        </oa:table>
+                        <oa:formValue id="idCustomer"/>
+                        <oa:formValue id="nameCustomer"/>
+                     </ui:contents>
+                  </oa:messageLayout>
+               </ui:contents>
+            </oa:messageComponentLayout>
+         </ui:contents>
+      </oa:pageLayout>
+   </content>
+</page>

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="loginVO"
+   SelectList="loginEO.IDNUM, 
+       loginEO.LOGINNUM, 
+       loginEO.LOGINPASSWORD, 
+       loginEO.ENAME, 
+       loginEO.IDCARD, 
+       loginEO.PHONE, 
+       loginEO.LAST_UPDATE_DATE, 
+       loginEO.LAST_UPDATED_BY, 
+       loginEO.CREATION_DATE, 
+       loginEO.CREATED_BY, 
+       loginEO.LAST_UPDATE_LOGIN, 
+       loginEO.SEX, 
+       loginEO.IDENT"
+   FromList="PERSONINFO loginEO"
+   BindingStyle="OracleName"
+   CustomQuery="false"
+   RowClass="oracle.apps.ak.tickets.server.loginVORowImpl"
+   ComponentClass="oracle.apps.ak.tickets.server.loginVOImpl"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.43.6" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <EntityUsage
+      Name="loginEO"
+      Entity="oracle.apps.ak.tickets.schema.loginEO" >
+      <DesignTime>
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Idnum"
+      IsNotNull="true"
+      EntityAttrName="Idnum"
+      EntityUsage="loginEO"
+      AliasName="IDNUM" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Loginnum"
+      EntityAttrName="Loginnum"
+      EntityUsage="loginEO"
+      AliasName="LOGINNUM" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Loginpassword"
+      EntityAttrName="Loginpassword"
+      EntityUsage="loginEO"
+      AliasName="LOGINPASSWORD" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ename"
+      EntityAttrName="Ename"
+      EntityUsage="loginEO"
+      AliasName="ENAME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Idcard"
+      EntityAttrName="Idcard"
+      EntityUsage="loginEO"
+      AliasName="IDCARD" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Phone"
+      EntityAttrName="Phone"
+      EntityUsage="loginEO"
+      AliasName="PHONE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateDate"
+      EntityAttrName="LastUpdateDate"
+      EntityUsage="loginEO"
+      AliasName="LAST_UPDATE_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdatedBy"
+      EntityAttrName="LastUpdatedBy"
+      EntityUsage="loginEO"
+      AliasName="LAST_UPDATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreationDate"
+      EntityAttrName="CreationDate"
+      EntityUsage="loginEO"
+      AliasName="CREATION_DATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreatedBy"
+      EntityAttrName="CreatedBy"
+      EntityUsage="loginEO"
+      AliasName="CREATED_BY" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="LastUpdateLogin"
+      EntityAttrName="LastUpdateLogin"
+      EntityUsage="loginEO"
+      AliasName="LAST_UPDATE_LOGIN" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Sex"
+      EntityAttrName="Sex"
+      EntityUsage="loginEO"
+      AliasName="SEX" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Ident"
+      EntityAttrName="Ident"
+      EntityUsage="loginEO"
+      AliasName="IDENT" >
+   </ViewAttribute>
+</ViewObject>
