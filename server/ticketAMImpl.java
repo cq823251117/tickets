@@ -94,7 +94,8 @@ public class ticketAMImpl extends OAApplicationModuleImpl {
 
     //查询出符合顾客要求的车次信息
     public void query(HashMap parameters ){
-        System.out.println("am query");
+        //System.out.println("am query");
+        int countRow=0;//用于统计数据库中符合条件的信息的条数
         String placeOfDeparture=(String)parameters.get("placeOfDeparture");
         String placeOfDestination=(String)parameters.get("placeOfDestination");
         String timePlan=(String)parameters.get("timePlan");
@@ -108,17 +109,13 @@ public class ticketAMImpl extends OAApplicationModuleImpl {
         System.out.println(placeOfDeparture+"+input+"+placeOfDestination+" "+timePlan);
         
         trainVOImpl trainVO=this.gettrainVO1();
-        int fetchedRowCountBefore=trainVO.getFetchedRowCount();
-        System.out.println("fetchedRowCountBefore= "+fetchedRowCountBefore);
-        int rowCountBefore=trainVO.getRowCount();
-        System.out.println("rowCountBefore= "+rowCountBefore);
         String whereClause=" 1=1 ";
         System.out.println("condition go");
         whereClause+=" AND YMD = '"+timePlan+ "' ";
         trainVO.executeQueryPara(whereClause);
         //System.out.println(trainVO.getQuery());
         int fetchedRowCountAfter=trainVO.getFetchedRowCount();
-        System.out.println("fetchedRowCountAfter= "+fetchedRowCountAfter);
+        //System.out.println("fetchedRowCountAfter= "+fetchedRowCountAfter);
         int rowCountAfter=trainVO.getRowCount();
         System.out.println("rowCountAfter= "+rowCountAfter);
        
@@ -179,6 +176,8 @@ public class ticketAMImpl extends OAApplicationModuleImpl {
                         for(int b=a+1;b<6;b++){
                             //当前高铁上找到目的站说明这条高铁符合条件
                             if(place[b]!=null&&placeOfDestination.compareTo(place[b])==0){
+                             countRow++;//统计行数
+                             System.out.println("sdfsdfsdfsfweeeeeeeeeeeeee= "+i);
                             //开始计算运行时间
                              String timeOfTrain="stoped";
                              try{
@@ -222,7 +221,7 @@ public class ticketAMImpl extends OAApplicationModuleImpl {
                             row.setEndtime(time[b].toString());
                             row.setAlltime(timeOfTrain);
                             row.setPrice(price2 );
-                            System.out.println("this is idCustomer of AM="+idCustomer);
+                            //System.out.println("this is idCustomer of AM="+idCustomer);
                             row.setNamecustomer(nameCustomer);
                             row.setIdcustomer(idCustomer);
                             row.setIdnumchange(idNumChange);
@@ -238,14 +237,65 @@ public class ticketAMImpl extends OAApplicationModuleImpl {
                     
             }
         }
+        trainVORowImpl row3=null;
+        row=(trainVORowImpl)deleteIter.getRowAtRangeIndex(0);
+        System.out.println("nanananananan11= "+row.getTrainname());
+        row3=(trainVORowImpl)deleteIter.getRowAtRangeIndex(1);
+        System.out.println("nanananananan11= "+row.getTrainname());
+        row=(trainVORowImpl)deleteIter.getRowAtRangeIndex(3);
+        if(row==null){
+            System.out.println("this is null");
+        }
+        trainVORowImpl []row2=new trainVORowImpl[50];
+        int still=0;
+        for(int c2=0;c2<countRow;c2++){
+            for(int k2=still;k2<rowCountAfter;k2++){
+                row=(trainVORowImpl)deleteIter.getRowAtRangeIndex(k2);
+                if(row!=null) {
+                    //System.out.println(k2+" ci shu "+row.getTrainname());
+                    row2[c2]=row;
+                    //System.out.println(k2+" ci shu "+row2[c2].getTrainname());
+                    still=k2+1;
+                    break;
+                }
+            }
+        }
+        String whereClause2=" 1=1 ";
+        //System.out.println("condition go");
+        whereClause2+=" AND ROWNUM <= '"+countRow+ "' ";
+        trainVO.executeQueryPara(whereClause2);
+        trainVO.setRangeStart(0);
+        trainVO.setRangeSize(countRow);
         
-        deleteIter.closeRowSetIterator();
-        
+    
+   
+       int x  = trainVO.getRowCount();
+     //System.out.println(trainVO.getQuery());
+       for(int c=0; c < countRow;c++){
+           row = (trainVORowImpl)   trainVO.getRowAtRangeIndex(c);
+           //System.out.println(c+" xunhuan li de ccheci = "+row2[c].getTrainname());
+           row.setTrainname(row2[c].getTrainname());
+           row.setStartplace(row2[c].getStartplace());
+           row.setDestinationplace(row2[c].getDestinationplace());
+           row.setStarttime(row2[c].getStarttime());
+           row.setEndtime(row2[c].getEndtime());
+           row.setAlltime(row2[c].getAlltime());
+           row.setPrice(row2[c].getPrice() );
+           row.setNamecustomer(row2[c].getNamecustomer());
+           row.setIdcustomer(row2[c].getIdcustomer());
+           row.setIdnumchange(row2[c].getIdnumchange());
+           row.setIdtrainchange(row2[c].getIdtrainchange());
+           row.setStartstationchange(row2[c].getStartstationchange());
+           row.setEndstationchange(row2[c].getEndstationchange());
+           row.setSeatclasschange(row2[c].getSeatclasschange());
+       }
+       deleteIter.closeRowSetIterator();
+  
     }
     
     //查询出被选择车辆的座位详细信息，包括座位价格，座位类型
     public void detail(HashMap parameters){
-        System.out.println("am detail");
+        //System.out.println("am detail");
         String idNum=(String)parameters.get("idNum");
         String startStation=(String)parameters.get("startStation");
         String endStation=(String)parameters.get("endStation");
@@ -834,45 +884,45 @@ public class ticketAMImpl extends OAApplicationModuleImpl {
     }
 
 //这是彭杰帮忙写的向数据库中插入一条新的数据，通过调用pl/sql写的包来插入数据，目前这个方法还没有运行，上面那个方法已经能够运行成功了
- public void apply(HashMap parameters)  throws SQLException {
-     String idTrain=(String)parameters.get("idOfTrain");
-     String idCustomer=(String)parameters.get("idCustomer");
-     String startStation=(String)parameters.get("startStation");
-     String endStation=(String)parameters.get("endStation");
-     String startTime=(String)parameters.get("startTime");
-     String endTime=(String)parameters.get("endTime");
-     String serial=(String)parameters.get("serial");
-     String nameCustomer=(String)parameters.get("nameCustomer");
-     String nameTrain=(String)parameters.get("nameTrain");
-     
-     oracle.jdbc.OracleCallableStatement ocs = null;
-      String result = null;
-      String x = null;
-      String sql = "BEGIN :1 := tickettest(:2,:3,:4,:5,:6,:7,:8,:9,:10); END;";
-      try {
-          ocs = (OracleCallableStatement)getDBTransaction().createCallableStatement(sql, 1);
-          ocs.setString(2, idTrain);
-          ocs.setString(3, idCustomer);
-          ocs.setString(4, startStation);
-          ocs.setString(5, endStation);
-          ocs.setString(6, startTime);
-          ocs.setString(7, endTime);
-          ocs.setString(8, serial);
-          ocs.setString(9, nameCustomer);
-          ocs.setString(10, nameTrain);
-          
-          ocs.execute();
-          result = ocs.getString(1);
-      } catch (SQLException e) {
-          e.printStackTrace();
-      } finally {
-          if (ocs != null) {
-              ocs.close();
-          }
-    } 
-     this.getOADBTransaction().commit(); 
- 
- }
+// public void apply(HashMap parameters)  throws SQLException {
+//     String idTrain=(String)parameters.get("idOfTrain");
+//     String idCustomer=(String)parameters.get("idCustomer");
+//     String startStation=(String)parameters.get("startStation");
+//     String endStation=(String)parameters.get("endStation");
+//     String startTime=(String)parameters.get("startTime");
+//     String endTime=(String)parameters.get("endTime");
+//     String serial=(String)parameters.get("serial");
+//     String nameCustomer=(String)parameters.get("nameCustomer");
+//     String nameTrain=(String)parameters.get("nameTrain");
+//     
+//     oracle.jdbc.OracleCallableStatement ocs = null;
+//      String result = null;
+//      String x = null;
+//      String sql = "BEGIN :1 := tickettest(:2,:3,:4,:5,:6,:7,:8,:9,:10); END;";
+//      try {
+//          ocs = (OracleCallableStatement)getDBTransaction().createCallableStatement(sql, 1);
+//          ocs.setString(2, idTrain);
+//          ocs.setString(3, idCustomer);
+//          ocs.setString(4, startStation);
+//          ocs.setString(5, endStation);
+//          ocs.setString(6, startTime);
+//          ocs.setString(7, endTime);
+//          ocs.setString(8, serial);
+//          ocs.setString(9, nameCustomer);
+//          ocs.setString(10, nameTrain);
+//          
+//          ocs.execute();
+//          result = ocs.getString(1);
+//      } catch (SQLException e) {
+//          e.printStackTrace();
+//      } finally {
+//          if (ocs != null) {
+//              ocs.close();
+//          }
+//    } 
+//     this.getOADBTransaction().commit(); 
+// 
+// }
     
     public void orderedTicket(HashMap parameter){
         String idCustomer=(String)parameter.get("idCustomer");
